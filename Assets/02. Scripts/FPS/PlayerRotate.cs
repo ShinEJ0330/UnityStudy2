@@ -9,6 +9,8 @@ namespace fps
 
         void Update()
         {
+            if (GameManager.gm.gState != GameManager.GameState.Run) return;
+            
             float mouse_X = Input.GetAxis("Mouse X");
 
             mx += mouse_X * rotSpeed * Time.deltaTime;
